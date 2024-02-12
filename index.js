@@ -2,6 +2,7 @@ const fs = require("fs");
 const path = require("path");
 const inquirer = require("inquirer");
 const generateMarkdown = require("./utils/generateMarkdown");
+const generateLicenseBadge = require("./utils/generateLicenseBadge");
 
 // array of questions for user
 const questions = [
@@ -73,18 +74,18 @@ function writeToFile(fileName, data) {
 
 // function to initialize program
 function init() {
-      inquirer
-        .prompt(questions)
-        .then((answers) => {
-          answers.licenseBadge = generateLicenseBadge(answers.license);
-          console.log(answers);
+  inquirer
+    .prompt(questions)
+    .then((answers) => {
+      answers.licenseBadge = generateLicenseBadge(answers.license);
+      console.log(answers);
 
-          writeToFile("sample/README.md", answers);
-        })
-        .then(() => {
-          console.log("Successfully wrote to sample/README.md");
-        })
-        .catch((err) => console.error(err));
+      writeToFile("sample/README.md", answers);
+    })
+    .then(() => {
+      console.log("Successfully wrote to sample/README.md");
+    })
+    .catch((err) => console.error(err));
 }
 
 // function call to initialize program
