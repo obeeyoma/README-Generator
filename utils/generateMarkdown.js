@@ -26,7 +26,7 @@ ${data.usage}
 
 ## License
 
-This project is licensed under the ${data.license} license. 
+This project is licensed under the ${data.license}. 
 
 ## Contributing
 ${data.contributing}
@@ -35,8 +35,8 @@ ${data.contributing}
 ${data.test}
 
 ## Questions
-- GitHub: ${data.github}
-- Email: ${data.email}
+- GitHub: [${data.github}](https://github.com/${data.github})
+- Email:  If you have any additional questions, you can reach me at ${data.email}
 `;
 }
 
