@@ -72,7 +72,20 @@ function writeToFile(fileName, data) {
 }
 
 // function to initialize program
-function init() {}
+function init() {
+      inquirer
+        .prompt(questions)
+        .then((answers) => {
+          answers.licenseBadge = generateLicenseBadge(answers.license);
+          console.log(answers);
+
+          writeToFile("sample/README.md", answers);
+        })
+        .then(() => {
+          console.log("Successfully wrote to sample/README.md");
+        })
+        .catch((err) => console.error(err));
+}
 
 // function call to initialize program
 init();
