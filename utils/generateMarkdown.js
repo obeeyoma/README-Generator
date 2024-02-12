@@ -35,8 +35,8 @@ ${data.contributing}
 ${data.test}
 
 ## Questions
-GitHub: [${data.github}](https://github.com/${data.github})
-Email:  If you have any additional questions, you can reach me at ${data.email}
+- GitHub: [${data.github}](https://github.com/${data.github})
+- Email:  If you have any additional questions, you can reach me at ${data.email}
 `;
 }
 
