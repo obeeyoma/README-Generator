@@ -11,3 +11,4 @@ function generateLicenseBadge(license) {
       return;
   }
 }
+module.exports = generateLicenseBadge;
